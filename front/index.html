@@ -88,7 +88,7 @@
                                 </li>
                                 <li class="top-page"><a class="link-lg" href="Yardim/elan.html"> Yardım </a>
                                 </li>
-                                <li><a class="link-lg" href="./pagesAccount/my-account.html"><span
+                                <li><a class="link-lg" href="{% url 'login' %}"><span
                                             class="fa fa-user icon-social"></span>
                                         Daxil ol </a></li>
                                 <li><a class="link-lg" href="register.html"> <span
@@ -105,10 +105,10 @@
                                                 <span class="fa fa-angle-down"></span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="index.html"><img class="image_flag"
+                                                <li><a href="{% url 'index' %}"><img class="image_flag"
                                                             src="./assets/images/flags/gb.png" alt="en" title="English">
                                                         AZ </a></li>
-                                                <li> <a href="index.html"> <img class="image_flag"
+                                                <li> <a href="{% url 'index' %}"> <img class="image_flag"
                                                             src="./assets/images/flags/RU.png" alt="ru" title="Arabic">
                                                         RU </a> </li>
                                             </ul>
@@ -184,7 +184,7 @@
                                 data-target="#navbarSidetoggle" aria-expanded="false">
                                 <span class="fa fa-bars"></span>
                             </button>
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="{% url 'index' %}">
                                 <img class="logo_light" src="/assets/images/logo_light.png" alt="logo" />
                                 <img class="logo_dark" src="/assets/images/logo_dark.png" alt="logo" />
                             </a>
@@ -200,23 +200,11 @@
                                         </a>
                                         <div class="dropdown-menu">
                                             <ul>
+                                                {% for category in categories %}
                                                 <li><a class="dropdown-item nav-link nav_item"
-                                                        href="products.html">Sevgi
-                                                        Tortları</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item" href="{% url 'contact' %}">Nigah
-                                                        Tortları</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item" href="faq.html">8
-                                                        Mart
-                                                        Tortları</a>
-                                                </li>
-                                                <li><a class="dropdown-item nav-link nav_item" href="404.html">Nişan
-                                                        Tortları</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item" href="login.html">Yay
-                                                        Tortları</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item" href="signup.html">Yeni
-                                                        İl Tortları</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item"
-                                                        href="term-condition.html">Populyar Tortlar</a></li>
+                                                        href="{% url 'cake-list' %}">
+                                                        {{category.name}} </a></li>
+                                                {% endfor %}
                                             </ul>
                                         </div>
                                     </li>
@@ -495,7 +483,7 @@
                         <div class="item">
                             <div class="product">
                                 <div class="product_img">
-                                    <a href="products-details.html">
+                                    <a href="{% url 'cake-detail' cake.id %}">
                                         <img src="/assets/images/10-1.webp" alt="product_img1">
                                     </a>
                                     <div class="products-paid">
@@ -521,10 +509,10 @@
                                     </div>
                                 </div>
                                 <div class="product-main-name">
-                                    <a href="products-details.html">Azza</a>
+                                    <a href="{% url 'cake-detail' cake.id %}">Azza</a>
                                 </div>
                                 <div class="product_info">
-                                    <h6 class="product_title"><a href="products-details.html">Toy Tortu</a>
+                                    <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
                                     </h6>
                                     <div class="product_price">
                                         <span class="price">20 Azn</span>
@@ -536,7 +524,7 @@
                         <div class="item">
                             <div class="product">
                                 <div class="product_img">
-                                    <a href="products-details.html">
+                                    <a href="{% url 'cake-detail' cake.id %}">
                                         <img src="/assets/images/10-1.webp" alt="product_img1">
                                     </a>
                                     <div class="products-paid">
@@ -562,10 +550,10 @@
                                     </div>
                                 </div>
                                 <div class="product-main-name">
-                                    <a href="products-details.html">Azza</a>
+                                    <a href="{% url 'cake-detail' cake.id %}">Azza</a>
                                 </div>
                                 <div class="product_info">
-                                    <h6 class="product_title"><a href="products-details.html">Toy Tortu</a>
+                                    <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
                                     </h6>
                                     <div class="product_price">
                                         <span class="price">20 Azn</span>
@@ -577,7 +565,7 @@
                         <div class="item">
                             <div class="product">
                                 <div class="product_img">
-                                    <a href="products-details.html">
+                                    <a href="{% url 'cake-detail' cake.id %}">
                                         <img src="/assets/images/10-1.webp" alt="product_img1">
                                     </a>
                                     <div class="products-paid">
@@ -603,7 +591,7 @@
                                     </div>
                                 </div>
                                 <div class="product-main-name">
-                                    <a href="products-details.html">Azza</a>
+                                    <a href="{% url 'cake-detail' cake.id %}">Azza</a>
                                     <div class="box-label">
                                         <span class="label-product label-sale" onclick="toggleActiveClass(this);">
                                             <i class="fa fa-heart"></i>
@@ -611,7 +599,7 @@
                                     </div>
                                 </div>
                                 <div class="product_info">
-                                    <h6 class="product_title"><a href="products-details.html">Toy Tortu</a>
+                                    <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
                                     </h6>
                                     <div class="product_price">
                                         <span class="price">20 Azn</span>
@@ -623,7 +611,7 @@
                         <div class="item">
                             <div class="product">
                                 <div class="product_img">
-                                    <a href="products-details.html">
+                                    <a href="{% url 'cake-detail' cake.id %}">
                                         <img src="/assets/images/10-1.webp" alt="product_img1">
                                     </a>
                                     <div class="products-paid">
@@ -649,10 +637,10 @@
                                     </div>
                                 </div>
                                 <div class="product-main-name">
-                                    <a href="products-details.html">Azza</a>
+                                    <a href="{% url 'cake-detail' cake.id %}">Azza</a>
                                 </div>
                                 <div class="product_info">
-                                    <h6 class="product_title"><a href="products-details.html">Toy Tortu</a>
+                                    <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
                                     </h6>
                                     <div class="product_price">
                                         <span class="price">20 Azn</span>
@@ -664,7 +652,7 @@
                         <div class="item">
                             <div class="product">
                                 <div class="product_img">
-                                    <a href="products-details.html">
+                                    <a href="{% url 'cake-detail' cake.id %}">
                                         <img src="/assets/images/10-1.webp" alt="product_img1">
                                     </a>
                                     <div class="products-paid">
@@ -690,10 +678,10 @@
                                     </div>
                                 </div>
                                 <div class="product-main-name">
-                                    <a href="products-details.html">Azza</a>
+                                    <a href="{% url 'cake-detail' cake.id %}">Azza</a>
                                 </div>
                                 <div class="product_info">
-                                    <h6 class="product_title"><a href="products-details.html">Toy Tortu</a>
+                                    <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
                                     </h6>
                                     <div class="product_price">
                                         <span class="price">20 Azn</span>
@@ -705,7 +693,7 @@
                         <div class="item">
                             <div class="product">
                                 <div class="product_img">
-                                    <a href="products-details.html">
+                                    <a href="{% url 'cake-detail' cake.id %}">
                                         <img src="/assets/images/10-1.webp" alt="product_img1">
                                     </a>
                                     <div class="products-paid">
@@ -733,10 +721,10 @@
                                     </div>
                                 </div>
                                 <div class="product-main-name">
-                                    <a href="products-details.html">Azza</a>
+                                    <a href="{% url 'cake-detail' cake.id %}">Azza</a>
                                 </div>
                                 <div class="product_info">
-                                    <h6 class="product_title"><a href="products-details.html">Toy Tortu</a>
+                                    <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
                                     </h6>
                                     <div class="product_price">
                                         <span class="price">20 Azn</span>
@@ -772,7 +760,7 @@
                         <div class="item">
                             <div class="product">
                                 <div class="product_img">
-                                    <a href="products-details.html">
+                                    <a href="{% url 'cake-detail' cake.id %}">
                                         <img src="/assets/images/10-1.webp" alt="product_img1">
                                     </a>
                                     <div class="products-paid">
@@ -798,10 +786,10 @@
                                     </div>
                                 </div>
                                 <div class="product-main-name">
-                                    <a href="products-details.html">Azza</a>
+                                    <a href="{% url 'cake-detail' cake.id %}">Azza</a>
                                 </div>
                                 <div class="product_info">
-                                    <h6 class="product_title"><a href="products-details.html">Toy Tortu</a>
+                                    <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
                                     </h6>
                                     <div class="product_price">
                                         <span class="price">20 Azn</span>
@@ -813,7 +801,7 @@
                         <div class="item">
                             <div class="product">
                                 <div class="product_img">
-                                    <a href="products-details.html">
+                                    <a href="{% url 'cake-detail' cake.id %}">
                                         <img src="/assets/images/10-1.webp" alt="product_img1">
                                     </a>
                                     <div class="products-paid">
@@ -839,10 +827,10 @@
                                     </div>
                                 </div>
                                 <div class="product-main-name">
-                                    <a href="products-details.html">Azza</a>
+                                    <a href="{% url 'cake-detail' cake.id %}">Azza</a>
                                 </div>
                                 <div class="product_info">
-                                    <h6 class="product_title"><a href="products-details.html">Toy Tortu</a>
+                                    <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
                                     </h6>
                                     <div class="product_price">
                                         <span class="price">20 Azn</span>
@@ -854,7 +842,7 @@
                         <div class="item">
                             <div class="product">
                                 <div class="product_img">
-                                    <a href="products-details.html">
+                                    <a href="{% url 'cake-detail' cake.id %}">
                                         <img src="/assets/images/10-1.webp" alt="product_img1">
                                     </a>
                                     <div class="products-paid">
@@ -880,10 +868,10 @@
                                     </div>
                                 </div>
                                 <div class="product-main-name">
-                                    <a href="products-details.html">Azza</a>
+                                    <a href="{% url 'cake-detail' cake.id %}">Azza</a>
                                 </div>
                                 <div class="product_info">
-                                    <h6 class="product_title"><a href="products-details.html">Toy Tortu</a>
+                                    <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
                                     </h6>
                                     <div class="product_price">
                                         <span class="price">20 Azn</span>
@@ -895,7 +883,7 @@
                         <div class="item">
                             <div class="product">
                                 <div class="product_img">
-                                    <a href="products-details.html">
+                                    <a href="{% url 'cake-detail' cake.id %}">
                                         <img src="/assets/images/10-1.webp" alt="product_img1">
                                     </a>
                                     <div class="products-paid">
@@ -923,10 +911,10 @@
                                     </div>
                                 </div>
                                 <div class="product-main-name">
-                                    <a href="products-details.html">Azza</a>
+                                    <a href="{% url 'cake-detail' cake.id %}">Azza</a>
                                 </div>
                                 <div class="product_info">
-                                    <h6 class="product_title"><a href="products-details.html">Toy Tortu</a>
+                                    <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
                                     </h6>
                                     <div class="product_price">
                                         <span class="price">20 Azn</span>
@@ -938,7 +926,7 @@
                         <div class="item">
                             <div class="product">
                                 <div class="product_img">
-                                    <a href="products-details.html">
+                                    <a href="{% url 'cake-detail' cake.id %}">
                                         <img src="/assets/images/10-1.webp" alt="product_img1">
                                     </a>
                                     <div class="products-paid">
@@ -966,10 +954,10 @@
                                     </div>
                                 </div>
                                 <div class="product-main-name">
-                                    <a href="products-details.html">Azza</a>
+                                    <a href="{% url 'cake-detail' cake.id %}">Azza</a>
                                 </div>
                                 <div class="product_info">
-                                    <h6 class="product_title"><a href="products-details.html">Toy Tortu</a>
+                                    <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
                                     </h6>
                                     <div class="product_price">
                                         <span class="price">20 Azn</span>
@@ -981,7 +969,7 @@
                         <div class="item">
                             <div class="product">
                                 <div class="product_img">
-                                    <a href="products-details.html">
+                                    <a href="{% url 'cake-detail' cake.id %}">
                                         <img src="/assets/images/10-1.webp" alt="product_img1">
                                     </a>
                                     <div class="products-paid">
@@ -1009,10 +997,10 @@
                                     </div>
                                 </div>
                                 <div class="product-main-name">
-                                    <a href="products-details.html">Azza</a>
+                                    <a href="{% url 'cake-detail' cake.id %}">Azza</a>
                                 </div>
                                 <div class="product_info">
-                                    <h6 class="product_title"><a href="products-details.html">Toy Tortu</a>
+                                    <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
                                     </h6>
                                     <div class="product_price">
                                         <span class="price">20 Azn</span>

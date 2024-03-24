@@ -500,243 +500,30 @@
                     </div>
                     <div class="row row-cols-1 row-cols-md-3">
                       
+                        {% for cake in cakes %}
                         <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="item">
                                 <div class="product">
                                     <div class="product_img">
                                         <a href="{% url 'cake-detail' cake.id %}">
-                                            <img src="/assets/images/10-1.webp" alt="product_img1">
+                                            <img src="{{ cake.images.first.img.url }}" alt="product_img1">
                                         </a>
                                     </div>
                                     <div class="product-main-name">
-                                        <a href="{% url 'cake-detail' cake.id %}">Azza</a>
+                                        <a href="{% url 'cake-detail' cake.id %}">{{ cake.brand.name }}</a>
                                     </div>
                                     <div class="product_info">
-                                        <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
+                                        <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">{{ cake.name }}</a>
                                         </h6>
                                         <div class="product_price">
-                                            <span class="price">20 Azn</span>
-                                            <del>30 Azn</del>
+                                            <span class="price">{{ cake.price }} Azn</span>
+                                            <del>{{ cake.old_price }} Azn</del>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="item">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="{% url 'cake-detail' cake.id %}">
-                                            <img src="/assets/images/10-1.webp" alt="product_img1">
-                                        </a>
-                                    </div>
-                                    <div class="product-main-name">
-                                        <a href="{% url 'cake-detail' cake.id %}">BalBadəm</a>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
-                                        </h6>
-                                        <div class="product_price">
-                                            <span class="price">25 Azn</span>
-                                            <del>35 Azn</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="item">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="{% url 'cake-detail' cake.id %}">
-                                            <img src="/assets/images/11.webp" alt="product_img1">
-                                        </a>
-                                    </div>
-                                    <div class="product-main-name">
-                                        <a href="{% url 'cake-detail' cake.id %}">Kündə</a>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Sevgi Tortu</a>
-                                        </h6>
-                                        <div class="product_price">
-                                            <span class="price">30 Azn</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="item">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="{% url 'cake-detail' cake.id %}">
-                                            <img src="/assets/images/11.webp" alt="product_img1">
-                                        </a>
-                                    </div>
-                                    <div class="product-main-name">
-                                        <a href="{% url 'cake-detail' cake.id %}">Azza</a>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Sevgi Tortu</a>
-                                        </h6>
-                                        <div class="product_price">
-                                            <span class="price">30 Azn</span>
-                                            <del>40 Azn</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="item">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="{% url 'cake-detail' cake.id %}">
-                                            <img src="/assets/images/12 (1).webp" alt="product_img1">
-                                        </a>
-                                    </div>
-                                    <div class="product-main-name">
-                                        <a href="{% url 'cake-detail' cake.id %}">BalBadəm</a>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
-                                        </h6>
-                                        <div class="product_price">
-                                            <span class="price">35 Azn</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="item">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="{% url 'cake-detail' cake.id %}">
-                                            <img src="/assets/images/10-1.webp" alt="product_img1">
-                                        </a>
-                                    </div>
-                                    <div class="product-main-name">
-                                        <a href="{% url 'cake-detail' cake.id %}">Oven</a>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
-                                        </h6>
-                                        <div class="product_price">
-                                            <span class="price">45 Azn</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="item">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="{% url 'cake-detail' cake.id %}">
-                                            <img src="/assets/images/11.webp" alt="product_img1">
-                                        </a>
-                                    </div>
-                                    <div class="product-main-name">
-                                        <a href="{% url 'cake-detail' cake.id %}">Kündə</a>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Sevgi Tortu</a>
-                                        </h6>
-                                        <div class="product_price">
-                                            <span class="price">30 Azn</span>
-                                            <del>35 Azn</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="item">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="{% url 'cake-detail' cake.id %}">
-                                            <img src="/assets/images/12.webp" alt="product_img1">
-                                        </a>
-                                    </div>
-                                    <div class="product-main-name">
-                                        <a href="{% url 'cake-detail' cake.id %}">Azza</a>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Sevgi Tortu</a>
-                                        </h6>
-                                        <div class="product_price">
-                                            <span class="price">45 Azn</span>
-                                            <del>60 Azn</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="item">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="{% url 'cake-detail' cake.id %}">
-                                            <img src="/assets/images/10-1.webp" alt="product_img1">
-                                        </a>
-                                    </div>
-                                    <div class="product-main-name">
-                                        <a href="{% url 'cake-detail' cake.id %}">Oven</a>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Toy Tortu</a>
-                                        </h6>
-                                        <div class="product_price">
-                                            <span class="price">25 Azn</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                           <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="item">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="{% url 'cake-detail' cake.id %}">
-                                            <img src="/assets/images/11.webp" alt="product_img1">
-                                        </a>
-                                    </div>
-                                    <div class="product-main-name">
-                                        <a href="{% url 'cake-detail' cake.id %}">Kündə</a>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Sevgi Tortu</a>
-                                        </h6>
-                                        <div class="product_price">
-                                            <span class="price">30 Azn</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="item">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="{% url 'cake-detail' cake.id %}">
-                                            <img src="/assets/images/12.webp" alt="product_img1">
-                                        </a>
-                                    </div>
-                                    <div class="product-main-name">
-                                        <a href="{% url 'cake-detail' cake.id %}">Azza</a>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6 class="product_title"><a href="{% url 'cake-detail' cake.id %}">Sevgi Tortu</a>
-                                        </h6>
-                                        <div class="product_price">
-                                            <span class="price">30 Azn</span>
-                                            <del>40 Azn</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

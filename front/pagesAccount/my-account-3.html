@@ -18,41 +18,41 @@
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="">
     <!-- Animation CSS -->
-    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/css/animate.css">
     <!-- Latest Bootstrap min CSS -->
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
     <!-- Icon Font CSS -->
-    <link rel="stylesheet" href="../assets/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/ionicons.min.css">
-    <link rel="stylesheet" href="../assets/css/themify-icons.css">
-    <link rel="stylesheet" href="../assets/css/linearicons.css">
-    <link rel="stylesheet" href="../assets/css/flaticon.css">
-    <link rel="stylesheet" href="../assets/css/simple-line-icons.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="/assets/css/linearicons.css">
+    <link rel="stylesheet" href="/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/assets/css/simple-line-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
       <!--- owl carousel CSS-->
-    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.theme.css">
-    <link rel="stylesheet" href="../assets/owlcarousel/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/owlcarousel/css/owl.theme.css">
+    <link rel="stylesheet" href="/assets/owlcarousel/css/owl.theme.default.min.css">
     <!-- Magnific Popup CSS -->
-    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
     <!-- Slick CSS -->
-    <link rel="stylesheet" href="../assets/css/slick.css">
-    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+    <link rel="stylesheet" href="/assets/css/slick.css">
+    <link rel="stylesheet" href="/assets/css/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.css" />
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="..//assets/css/responsive.css">
 
     <!-- BADGAR CSS STARTS -->
-    <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="../assets/css/theme.css">
-    <link rel="stylesheet" href="../assets/css/header1.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    <link rel="stylesheet" href="/assets/css/header1.css">
     <!-- BADGAR CSS ENDS -->
 
 </head>
@@ -85,9 +85,9 @@
                             </li>
                             <li class="top-page"><a class="link-lg" href="umumisehifeler/toponsual.html"> Yardım </a>
                             </li>
-                            <li><a class="link-lg" href="login.html"><span class="fa fa-user icon-social"></span>
+                            <li><a class="link-lg" href="{% url 'login' %}"><span class="fa fa-user icon-social"></span>
                                     Daxil ol </a></li>
-                            <li><a class="link-lg" href="register.html"> <span
+                            <li><a class="link-lg" href="{% url 'register' %}"> <span
                                         class="fa fa-address-card icon-social"></span> Qeydiyyat </a>
                             </li>
                     
@@ -116,16 +116,16 @@
                                 <div class="btn-group languages-block ">
                                     <form action="" method="post" enctype="multipart/form-data" id="bt-language">
                                         <a class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                                            <img src="../assets/images/flags/AZ.png" alt="az" title="English">
+                                            <img src="/assets/images/flags/AZ.png" alt="az" title="English">
                                             <span class="">AZ</span>
                                             <span class="fa fa-angle-down"></span>
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="index.html"><img class="image_flag"
-                                                        src="../assets/images/flags/gb.png" alt="en" title="English">
+                                            <li><a href="{% url 'index' %}"><img class="image_flag"
+                                                        src="/assets/images/flags/gb.png" alt="en" title="English">
                                                     AZ </a></li>
-                                            <li> <a href="index.html"> <img class="image_flag"
-                                                        src="../assets/images/flags/RU.png" alt="ru" title="Arabic">
+                                            <li> <a href="{% url 'index' %}"> <img class="image_flag"
+                                                        src="/assets/images/flags/RU.png" alt="ru" title="Arabic">
                                                     RU </a> </li>
                                         </ul>
                                     </form>
@@ -142,9 +142,9 @@
     <div class="middle-header dark_skin">
         <div class="container">
             <div class="nav_block">
-                <a class="navbar-brand desc-logo" href="index.html" >
+                <a class="navbar-brand desc-logo" href="{% url 'index' %}" >
                     <img class="logo_light" src="..//assets/images/logo_light.png" alt="logo" />
-                    <img class="logo_dark" src="../assets/images/logo_dark.png" alt="logo" />
+                    <img class="logo_dark" src="/assets/images/logo_dark.png" alt="logo" />
                 </a>
 
 
@@ -196,7 +196,7 @@
               
                     <div class="d-flex w-100 justify-content-between">
                         <nav class="mobile-logo navbar navbar-expand-lg col-lg-9 col-6">
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="{% url 'index' %}">
                                 <img class="logo_light" src="/assets/images/logo_light.png" alt="logo" />
                                 <img class="logo_dark" src="/assets/images/logo_dark.png" alt="logo" />
                             </a>
@@ -295,32 +295,32 @@
                         <ul>
                             <li class="active">
                                 <a href="my-account.html">
-                                    <span><img src="../assets/images/site/elanlar.svg" alt="elan" /></span>
+                                    <span><img src="/assets/images/site/elanlar.svg" alt="elan" /></span>
                                     <span>Elanlar</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="odenisler.html">
-                                    <span><img src="../assets/images/site/hesab.svg" alt="hesab" /></span>
+                                    <span><img src="/assets/images/site/hesab.svg" alt="hesab" /></span>
                                     <span>Ödənişlər</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="profil-edit.html">
-                                    <span><img src="../assets/images/site/profil.svg" alt="elan" /></span>
+                                    <span><img src="/assets/images/site/profil.svg" alt="elan" /></span>
                                     <span>Profil</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="elan-limiti.html">
-                                    <span><img src="../assets/images/site/elanlar.svg" alt="elan" /></span>
+                                    <span><img src="/assets/images/site/elanlar.svg" alt="elan" /></span>
                                     <span>Elan limiti</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="biznespaketler.html">
-                                    <span><img src="../assets/images/site/elanlar.svg" alt="elan" /></span>
+                                    <span><img src="/assets/images/site/elanlar.svg" alt="elan" /></span>
                                     <span>Paketler</span>
                                 </a>
                             </li>
@@ -374,7 +374,7 @@
                                     <div class="product-image-container">
                                         <a href="product.html" target="_self" title="Drutick lanaeger">
                                             <img class="img-1 img-responsive lazyautosizes lazyloaded" data-sizes="auto"
-                                                src="../assets/images/2.webp" data-src="../assets/images/2.webp"
+                                                src="/assets/images/2.webp" data-src="/assets/images/2.webp"
                                                 alt="image" sizes="201px" />
                                         </a>
                                         <div class="waiting">
@@ -532,25 +532,25 @@
 
 
     <!-- Latest jQuery -->
-    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js"></script>
 
     <!-- popper min js -->
-    <script src="../assets/js/popper.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
     <!-- Latest compiled and minified Bootstrap -->
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
     <!-- owl-carousel min js  -->
     <script src="..//assets/owlcarousel/js/owl.carousel.min.js"></script>
     <!-- magnific-popup min js  -->
-    <script src="../assets/js/magnific-popup.min.js"></script>
+    <script src="/assets/js/magnific-popup.min.js"></script>
     <!-- waypoints min js  -->
-    <script src="../assets/js/waypoints.min.js"></script>
+    <script src="/assets/js/waypoints.min.js"></script>
     <!-- parallax js  -->
-    <script src="../assets/js/parallax.js"></script>
+    <script src="/assets/js/parallax.js"></script>
     <!-- countdown js  -->
-    <script src="../assets/js/jquery.countdown.min.js"></script>
+    <script src="/assets/js/jquery.countdown.min.js"></script>
     <!-- imagesloaded js -->
-    <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
     <!-- isotope min js -->
     <script src="..//assets/js/isotope.min.js"></script>
     <!-- jquery.dd.min js -->
@@ -560,10 +560,10 @@
     <!-- elevatezoom js -->
     <script src="..//assets/js/jquery.elevatezoom.js"></script>
     <!-- scripts js -->
-    <script src="../assets/js/scripts.js"></script>
+    <script src="/assets/js/scripts.js"></script>
 
     <!-- BADGAR SCRIPT STARTS -->
-    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="/assets/js/bootstrap-select.min.js"></script>
     <!-- BADGAR SCRIPT ENDS -->
 </body>
 

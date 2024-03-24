@@ -109,10 +109,10 @@
                                                 <span class="fa fa-angle-down"></span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="index.html"><img class="image_flag"
+                                                <li><a href="{% url 'index' %}"><img class="image_flag"
                                                             src="/assets/images/flags/gb.png" alt="en" title="English">
                                                         AZ </a></li>
-                                                <li> <a href="index.html"> <img class="image_flag"
+                                                <li> <a href="{% url 'index' %}"> <img class="image_flag"
                                                             src="/assets/images/flags/RU.png" alt="ru" title="Arabic">
                                                         RU </a> </li>
                                             </ul>
@@ -184,7 +184,7 @@
 
                     <div class="d-flex w-100 justify-content-between">
                         <nav class="mobile-logo navbar navbar-expand-lg col-lg-9 col-6">
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="{% url 'index' %}">
                                 <img class="logo_light" src="/assets/images/logo_light.png" alt="logo" />
                                 <img class="logo_dark" src="/assets/images/logo_dark.png" alt="logo" />
                             </a>
@@ -203,23 +203,11 @@
                                         </a>
                                         <div class="dropdown-menu">
                                             <ul>
+                                                {% for category in categories %}
                                                 <li><a class="dropdown-item nav-link nav_item"
-                                                        href="products.html">Sevgi
-                                                        Tortları</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item" href="{% url 'contact' %}">Nigah
-                                                        Tortları</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item" href="faq.html">8
-                                                        Mart
-                                                        Tortları</a>
-                                                </li>
-                                                <li><a class="dropdown-item nav-link nav_item" href="404.html">Nişan
-                                                        Tortları</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item" href="login.html">Yay
-                                                        Tortları</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item" href="signup.html">Yeni
-                                                        İl Tortları</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item"
-                                                        href="term-condition.html">Populyar Tortlar</a></li>
+                                                        href="{% url 'cake-list' %}">
+                                                        {{category.name}} </a></li>
+                                                {% endfor %}
                                             </ul>
                                         </div>
                                     </li>
